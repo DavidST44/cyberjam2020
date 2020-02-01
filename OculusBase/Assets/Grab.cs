@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Grab : MonoBehaviour
 {
-    GameObject selected;
+    GameObject selected, pick;
     AudioSource playerSource;
     public bool isRight;
     public GameObject hand;
@@ -49,6 +49,10 @@ public class Grab : MonoBehaviour
         {
             other.GetComponent<AudioSource>().Play();
         }
+        if (other.tag == "PickUp")
+        {
+            pick = other.gameObject;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -56,6 +60,10 @@ public class Grab : MonoBehaviour
         if (other.tag == "Portal")
         {
             selected = null;
+        }
+        if (other.tag == "PickUp")
+        {
+            pick = null;
         }
     }
 
@@ -70,6 +78,10 @@ public class Grab : MonoBehaviour
             else
                 selected.transform.parent = gameObject.transform;
         }
+        if(pick != null)
+        {
+            pick.transform.parent = gameObject.transform;
+        }
     } 
 
     void UnClick()
@@ -78,6 +90,10 @@ public class Grab : MonoBehaviour
         if (selected != null)// && (selected.transform.parent == gameObject.transform || selected.transform.parent == hand.transform))
         {
             selected.transform.parent = null;
+        }
+        if(pick != null)
+        {
+            pick.transform.parent = null;
         }
     }
 }
