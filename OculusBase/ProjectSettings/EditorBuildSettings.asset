@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TestWorld2.unity
     guid: c9ce02cd8bd8ee14980610e323c338fc
-  - enabled: 0
+  - enabled: 1
     path: Assets/Pavlov.unity
     guid: 08944046903454e4095fa39e333e66fa
   - enabled: 0
