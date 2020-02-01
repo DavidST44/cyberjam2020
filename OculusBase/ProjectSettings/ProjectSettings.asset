@@ -164,7 +164,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: au.com.smartsense.IDK
+    Android: au.com.smartsense.PavloVR
     Standalone: com.DefaultCompany.OculusBase
   buildNumber: {}
   AndroidBundleVersionCode: 1
