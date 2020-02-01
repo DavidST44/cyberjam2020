@@ -3,11 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class Grab : MonoBehaviour
 {
-    GameObject selected, pick;
+    GameObject selected, pick, crystal;
     AudioSource playerSource;
     public bool isRight;
     public GameObject hand;
-    bool secondHand;
+    bool secondHand;   
     // Start is called before the first frame update
     void Start()
     {
@@ -65,10 +65,19 @@ public class Grab : MonoBehaviour
         {
             pick = null;
         }
+        if (other.tag == "Crystal")
+        {
+            crystal = other.gameObject;
+        }
     }
 
     void Click()
     {
+        if (crystal != null)
+        {
+            crystal.GetComponent<Crystal>().CrystalDeath();
+            crystal = null;
+        }
         if (selected != null)
         {            
             if(selected.transform.parent == hand.transform)
