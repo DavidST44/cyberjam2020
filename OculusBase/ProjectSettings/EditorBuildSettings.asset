@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Pavlov.unity
     guid: 08944046903454e4095fa39e333e66fa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Worlds/GrassField.unity
     guid: 23e2baec4a3b0b34198b9cd9fcbec6de
   - enabled: 0
