@@ -12,6 +12,7 @@ TagManager:
   - PickUp
   - Enemy
   - Terrain
+  - Crystal
   layers:
   - Default
   - TransparentFX
