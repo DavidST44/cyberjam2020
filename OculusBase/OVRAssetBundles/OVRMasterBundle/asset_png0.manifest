@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 3214883559
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0e645831b2515fc42941fa28e6f48f95
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Materials/Grass.png
+- Assets/Oculus/VR/Textures/HandTracking/HandTracking_uvmap_2048.png
+Dependencies: []
