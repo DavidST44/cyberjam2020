@@ -7,9 +7,7 @@ public class Grab : MonoBehaviour
     AudioSource playerSource;
     public bool isRight;
     public GameObject hand;
-    int scene;
     bool secondHand;
-    float xDis, zDis;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,21 +45,14 @@ public class Grab : MonoBehaviour
         {
             selected = other.gameObject;
         }
-        //if (other.tag == "Interactable")
-        //{
-        //    Debug.Log("interacterable");
-        //    selected = other.gameObject;
-        //    selected.GetComponent<MeshRenderer>().enabled = true;
-        //}
+        if (other.tag == "Interactable")
+        {
+            other.GetComponent<AudioSource>().Play();
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        //if (other.gameObject.tag == "Interactable")
-        //{
-        //    selected.GetComponent<MeshRenderer>().enabled = false;
-        //    selected = null;
-        //}
         if (other.tag == "Portal")
         {
             selected = null;
