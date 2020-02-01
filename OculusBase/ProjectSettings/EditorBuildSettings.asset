@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Worlds/DarkCave.unity
     guid: 8557367fc36b39849b12bcced566bb49
+  - enabled: 1
+    path: Assets/Worlds/Asteroid.unity
+    guid: 5b53dd7857ca71949b1b1ffacba49148
   m_configObjects: {}

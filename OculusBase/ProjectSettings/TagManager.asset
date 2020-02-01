@@ -10,6 +10,8 @@ TagManager:
   - Interactable
   - Portal
   - PickUp
+  - Enemy
+  - Terrain
   layers:
   - Default
   - TransparentFX
