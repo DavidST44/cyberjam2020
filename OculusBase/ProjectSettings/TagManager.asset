@@ -9,6 +9,7 @@ TagManager:
   - Marker
   - Interactable
   - Portal
+  - PickUp
   layers:
   - Default
   - TransparentFX
