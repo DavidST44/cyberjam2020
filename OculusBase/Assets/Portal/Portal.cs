@@ -18,7 +18,7 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject == player && transform.localScale.x >= 0.2f)
+        if(other.gameObject == player && transform.localScale.x >= 0.4f)
         {
             SceneManager.LoadScene(level);
         }

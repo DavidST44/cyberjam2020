@@ -6,6 +6,7 @@ public class Crystal : MonoBehaviour
     private void Start()
     {
         PlayerPrefs.GetInt("Crystal");
+        DontDestroyOnLoad(this);
     }
     void Update()
     {
@@ -18,10 +19,10 @@ public class Crystal : MonoBehaviour
     public void CrystalDeath()
     {
         PlayerPrefs.SetInt("Crystal", PlayerPrefs.GetInt("Crystal") + 1);
-        if (PlayerPrefs.GetInt("Crystal") >= 1)
+        if (PlayerPrefs.GetInt("Crystal") >= 3)
         {
-            PlayerPrefs.SetInt("Crystal", 0);
-            //SceneManager.LoadScene("");            
+            //PlayerPrefs.SetInt("Crystal", 0);
+            SceneManager.LoadScene("IslandOfWin");            
         }
         Destroy(gameObject);
     }

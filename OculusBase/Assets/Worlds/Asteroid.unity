@@ -295,7 +295,7 @@ PrefabInstance:
     - target: {fileID: 2907744547598119088, guid: 65487723568942f47bf319674718d5f2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2907744547598119088, guid: 65487723568942f47bf319674718d5f2,
         type: 3}
@@ -436,17 +436,17 @@ PrefabInstance:
     - target: {fileID: 2907744547598119088, guid: 65487723568942f47bf319674718d5f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.82
+      value: 30.09
       objectReference: {fileID: 0}
     - target: {fileID: 2907744547598119088, guid: 65487723568942f47bf319674718d5f2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -26.14
+      value: -34.07
       objectReference: {fileID: 0}
     - target: {fileID: 2907744547598119088, guid: 65487723568942f47bf319674718d5f2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.24
+      value: 8.24
       objectReference: {fileID: 0}
     - target: {fileID: 2907744547598119088, guid: 65487723568942f47bf319674718d5f2,
         type: 3}
@@ -471,7 +471,7 @@ PrefabInstance:
     - target: {fileID: 2907744547598119088, guid: 65487723568942f47bf319674718d5f2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2907744547598119088, guid: 65487723568942f47bf319674718d5f2,
         type: 3}
@@ -710,7 +710,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 5f67db069f8983f49bdeff2fdad26975, type: 3}
 --- !u!1001 &1119006365

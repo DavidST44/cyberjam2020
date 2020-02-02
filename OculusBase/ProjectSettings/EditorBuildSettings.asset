@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Worlds/Asteroid.unity
     guid: 5b53dd7857ca71949b1b1ffacba49148
+  - enabled: 1
+    path: Assets/Worlds/IslandOfWin.unity
+    guid: 255728748ff1b2b4897350c0a34ea096
   m_configObjects: {}
