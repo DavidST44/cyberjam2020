@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRight: 1
   hand: {fileID: 97503539}
+  hinge: {fileID: 0}
 --- !u!54 &97503541
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1306,6 +1307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1215915127}
   - component: {fileID: 1215915126}
+  - component: {fileID: 1215915128}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1387,6 +1389,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1215915128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215915125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd3ac2dd25708e43a7f8512cde96056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstStart: 1
 --- !u!1001 &1261422807
 PrefabInstance:
   m_ObjectHideFlags: 0

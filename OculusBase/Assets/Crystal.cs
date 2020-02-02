@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Crystal : MonoBehaviour
 {
@@ -17,9 +18,10 @@ public class Crystal : MonoBehaviour
     public void CrystalDeath()
     {
         PlayerPrefs.SetInt("Crystal", PlayerPrefs.GetInt("Crystal") + 1);
-        if (PlayerPrefs.GetInt("Crystal") >= 3)
+        if (PlayerPrefs.GetInt("Crystal") >= 1)
         {
             PlayerPrefs.SetInt("Crystal", 0);
+            //SceneManager.LoadScene("");            
         }
         Destroy(gameObject);
     }

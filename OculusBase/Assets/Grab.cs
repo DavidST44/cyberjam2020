@@ -4,9 +4,11 @@ using UnityEngine.SceneManagement;
 public class Grab : MonoBehaviour
 {
     GameObject selected, pick, crystal;
+    Rigidbody pickRig;
     AudioSource playerSource;
     public bool isRight;
     public GameObject hand;
+    public GameObject hinge;
     bool secondHand;   
     // Start is called before the first frame update
     void Start()
@@ -53,6 +55,10 @@ public class Grab : MonoBehaviour
         {
             pick = other.gameObject;
         }
+        if (other.tag == "Crystal")
+        {
+            crystal = other.gameObject;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -67,7 +73,7 @@ public class Grab : MonoBehaviour
         }
         if (other.tag == "Crystal")
         {
-            crystal = other.gameObject;
+            crystal = null;
         }
     }
 
@@ -90,6 +96,9 @@ public class Grab : MonoBehaviour
         if(pick != null)
         {
             pick.transform.parent = gameObject.transform;
+            pickRig = pick.GetComponent<Rigidbody>();
+            pickRig.useGravity = false;
+            pickRig.isKinematic = true;
         }
     } 
 
@@ -103,6 +112,9 @@ public class Grab : MonoBehaviour
         if(pick != null)
         {
             pick.transform.parent = null;
+            pickRig.useGravity = true;
+            pickRig.isKinematic = false;
+            pickRig = null;
         }
     }
 }

@@ -2,7 +2,7 @@
 
 public class OriginalStartUpCheck : MonoBehaviour
 {
-    bool firstStart = true;
+    public bool firstStart = true;
 
     void Start()
     {

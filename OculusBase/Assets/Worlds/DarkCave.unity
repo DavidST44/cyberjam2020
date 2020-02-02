@@ -212,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRight: 1
   hand: {fileID: 97503539}
+  hinge: {fileID: 0}
 --- !u!54 &97503541
 Rigidbody:
   m_ObjectHideFlags: 0
