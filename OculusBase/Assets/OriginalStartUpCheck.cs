@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OriginalStartUpCheck : MonoBehaviour
 {
-    public bool firstStart = true;
+    public int win, current;
 
     void Start()
     {
-        if (firstStart)
-            PlayerPrefs.SetInt("Crystal", 0);
+        DontDestroyOnLoad(this.gameObject);
+        if(current == win)
+        {
+            SceneManager.LoadScene("IslandOfWin");
+        }
     }
 }

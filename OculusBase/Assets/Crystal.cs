@@ -1,28 +1,18 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Crystal : MonoBehaviour
 {
+    OriginalStartUpCheck countMe;
     private void Start()
     {
-        PlayerPrefs.GetInt("Crystal");
-        DontDestroyOnLoad(this);
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            CrystalDeath();
-        }
+        countMe = GameObject.Find("CC").GetComponent<OriginalStartUpCheck>();
     }
 
     public void CrystalDeath()
     {
-        PlayerPrefs.SetInt("Crystal", PlayerPrefs.GetInt("Crystal") + 1);
-        if (PlayerPrefs.GetInt("Crystal") >= 3)
+        if(countMe != null)
         {
-            //PlayerPrefs.SetInt("Crystal", 0);
-            SceneManager.LoadScene("IslandOfWin");            
+            countMe.current++;
         }
         Destroy(gameObject);
     }
