@@ -14,6 +14,7 @@ public class Crystal : MonoBehaviour
         {
             countMe.current++;
         }
+        countMe.checkWin();
         Destroy(gameObject);
     }
 }
