@@ -5,10 +5,11 @@ public class Portal : MonoBehaviour
 {
     public GameObject player;
     public string level;
+    OriginalStartUpCheck cc;
 
     void Start()
     {
-        
+        cc = GameObject.Find("CC").GetComponent<OriginalStartUpCheck>();
     }
 
     void Update()
@@ -20,7 +21,12 @@ public class Portal : MonoBehaviour
     {
         if(other.gameObject == player && transform.localScale.x >= 0.4f)
         {
-            SceneManager.LoadScene(level);
+            if(cc.won)
+            {
+                SceneManager.LoadScene("IslandOfWin");
+            }
+            else
+                SceneManager.LoadScene(level);
         }
     }
 }
