@@ -59,6 +59,10 @@ public class Grab : MonoBehaviour
         {
             crystal = other.gameObject;
         }
+        if (other.tag == "Hinge")
+        {
+            hinge = other.gameObject;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -74,6 +78,10 @@ public class Grab : MonoBehaviour
         if (other.tag == "Crystal")
         {
             crystal = null;
+        }
+        if (other.tag == "Hinge")
+        {
+            hinge = null;
         }
     }
 
@@ -100,6 +108,11 @@ public class Grab : MonoBehaviour
             pickRig.useGravity = false;
             pickRig.isKinematic = true;
         }
+        if(hinge != null)
+        {
+            hinge.transform.parent = gameObject.transform;
+            hinge.GetComponent<Rigidbody>().isKinematic = true;
+        }
     } 
 
     void UnClick()
@@ -115,6 +128,11 @@ public class Grab : MonoBehaviour
             pickRig.useGravity = true;
             pickRig.isKinematic = false;
             pickRig = null;
+        }
+        if (hinge != null)
+        {
+            hinge.transform.parent = null;
+            hinge.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 }

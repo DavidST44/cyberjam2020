@@ -12,18 +12,21 @@ public class Spray : MonoBehaviour
 
     void Update()
     {
-        OVRInput.Update();
+        if (transform.parent.tag == "Player")
+        {
+            OVRInput.Update();
 
-        // returns true if the primary button (typically “A”) is currently pressed.
-        if ((isRight && OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) ||
-            (!isRight && OVRInput.Get(OVRInput.RawButton.LIndexTrigger)) ||
-               (Input.GetMouseButton(0)))
-        {
-            sprayParticleSystem.Play();
-        }
-        else
-        {
-            sprayParticleSystem.Stop();
+            // returns true if the primary button (typically “A”) is currently pressed.
+            if ((isRight && OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) ||
+                (!isRight && OVRInput.Get(OVRInput.RawButton.LIndexTrigger)) ||
+                   (Input.GetMouseButton(0)))
+            {
+                sprayParticleSystem.Play();
+            }
+            else
+            {
+                sprayParticleSystem.Stop();
+            }
         }
     }
 
