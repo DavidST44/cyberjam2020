@@ -33,12 +33,22 @@ public class Spray : MonoBehaviour
             //}
             sprayParticleSystem.Play();
         }
-        else
+        if (transform.parent == null)
+        {
             sprayParticleSystem.Stop();
+        }
     }
 
     //private void FixedUpdate()
     //{
     //    OVRInput.FixedUpdate();
     //}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.layer == 8)
+        {
+            other.gameObject.GetComponent<Rigidbody>().AddExplosionForce(100, transform.position, 3);
+        }
+    }
 }
