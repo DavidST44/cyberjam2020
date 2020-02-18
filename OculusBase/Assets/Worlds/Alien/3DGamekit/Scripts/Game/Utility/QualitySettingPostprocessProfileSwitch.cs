@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
+//using UnityEngine.Rendering.PostProcessing;
 #if UNITY_EDITOR
 using UnityEditor;
 using System.Linq;
@@ -15,22 +15,22 @@ namespace Gamekit3D
         [System.Serializable]
         public class QualitySettingEntry
         {
-            public PostProcessProfile profile;
-            public PostProcessLayer.Antialiasing usedAntiAliasing;
+            //public PostProcessProfile profile;
+            //public PostProcessLayer.Antialiasing usedAntiAliasing;
             public int minimumQualitySetting;
         }
 
         public QualitySettingEntry[] settings = new QualitySettingEntry[0];
 
-        private PostProcessVolume m_Volume;
-        private PostProcessProfile m_OriginalProfile;
-
-        private PostProcessLayer m_Layer;
-        private PostProcessLayer.Antialiasing m_AntiAliasing;
+        //private PostProcessVolume m_Volume;
+        //private PostProcessProfile m_OriginalProfile;
+        //
+        //private PostProcessLayer m_Layer;
+        //private PostProcessLayer.Antialiasing m_AntiAliasing;
 
         private int m_PreviousQualitySetting;
         private int m_PickedSetting;
-
+        /*
         private void OnEnable()
         {
             m_PreviousQualitySetting = QualitySettings.GetQualityLevel();
@@ -50,7 +50,7 @@ namespace Gamekit3D
 
             DoSwitch();
         }
-
+        
         private void OnDisable()
         {
             m_Volume.sharedProfile = m_OriginalProfile;
@@ -71,7 +71,7 @@ namespace Gamekit3D
                     : settings[m_PickedSetting].usedAntiAliasing;
             }
         }
-
+        */
         void Update()
         {
             int qualitySettingLevel = QualitySettings.GetQualityLevel();
@@ -79,7 +79,7 @@ namespace Gamekit3D
             if (qualitySettingLevel != m_PreviousQualitySetting)
             {
                 m_PreviousQualitySetting = qualitySettingLevel;
-                DoSwitch();
+                //DoSwitch();
             }
         }
 
@@ -211,6 +211,7 @@ namespace Gamekit3D
             }
             else
             {
+                /*
                 PostProcessProfile newProfile =
                     EditorGUILayout.ObjectField("Profile", setting.profile, typeof(PostProcessProfile), false) as PostProcessProfile;
 
@@ -228,6 +229,7 @@ namespace Gamekit3D
                     setting.usedAntiAliasing = antiAliasing;
                     EditorUtility.SetDirty(m_Target);
                 }
+                */
             }
         }
     }

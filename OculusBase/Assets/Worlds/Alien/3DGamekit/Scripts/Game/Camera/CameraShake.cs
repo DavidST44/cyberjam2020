@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
+//using Cinemachine;
 
 namespace Gamekit3D
 {
@@ -15,13 +15,13 @@ namespace Gamekit3D
         protected float m_ShakeAmount;
         protected float m_RemainingShakeTime;
 
-        protected CinemachineVirtualCameraBase m_CinemachineVCam;
+        //protected CinemachineVirtualCameraBase m_CinemachineVCam;
         protected bool m_IsShaking = false;
         protected Vector3 m_OriginalLocalPosition;
 
         private void Awake()
         {
-            m_CinemachineVCam = GetComponent<CinemachineVirtualCameraBase>();
+            //m_CinemachineVCam = GetComponent<CinemachineVirtualCameraBase>();
         }
 
         private void OnEnable()
@@ -38,13 +38,13 @@ namespace Gamekit3D
         {
             if (m_IsShaking)
             {
-                m_CinemachineVCam.LookAt.localPosition = m_OriginalLocalPosition + Random.insideUnitSphere * m_ShakeAmount;
+                //m_CinemachineVCam.LookAt.localPosition = m_OriginalLocalPosition + Random.insideUnitSphere * m_ShakeAmount;
 
                 m_RemainingShakeTime -= Time.deltaTime;
                 if (m_RemainingShakeTime <= 0)
                 {
                     m_IsShaking = false;
-                    m_CinemachineVCam.LookAt.localPosition = m_OriginalLocalPosition;
+                    //m_CinemachineVCam.LookAt.localPosition = m_OriginalLocalPosition;
                 }
             }
         }
@@ -53,7 +53,7 @@ namespace Gamekit3D
         {
             if (!m_IsShaking)
             {
-                m_OriginalLocalPosition = m_CinemachineVCam.LookAt.localPosition;
+               // m_OriginalLocalPosition = m_CinemachineVCam.LookAt.localPosition;
             }
 
             m_IsShaking = true;
@@ -72,7 +72,7 @@ namespace Gamekit3D
 
         void StopShake ()
         {
-            m_OriginalLocalPosition = m_CinemachineVCam.LookAt.localPosition;
+            //m_OriginalLocalPosition = m_CinemachineVCam.LookAt.localPosition;
             m_IsShaking = false;
             m_ShakeAmount = 0f;
             m_RemainingShakeTime = 0f;
