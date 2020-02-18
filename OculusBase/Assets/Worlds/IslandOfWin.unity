@@ -412,6 +412,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6928663913338960432, guid: 65487723568942f47bf319674718d5f2,
+        type: 3}
+      propertyPath: m_DrawHalo
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2906348392715433894, guid: 65487723568942f47bf319674718d5f2,
         type: 3}
       propertyPath: m_Enabled
