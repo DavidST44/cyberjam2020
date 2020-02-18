@@ -5406,7 +5406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd3ac2dd25708e43a7f8512cde96056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  win: 6
+  win: 7
   current: 0
   won: 0
 --- !u!4 &326580471
