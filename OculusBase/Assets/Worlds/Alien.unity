@@ -11152,7 +11152,7 @@ GameObject:
   - component: {fileID: 992429285}
   - component: {fileID: 992429284}
   - component: {fileID: 992429283}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Rock1C (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

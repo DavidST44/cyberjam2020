@@ -44,11 +44,11 @@ public class Spray : MonoBehaviour
     //    OVRInput.FixedUpdate();
     //}
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if(other.gameObject.layer == 8)
         {
-            other.gameObject.GetComponent<Rigidbody>().AddExplosionForce(100, transform.position, 3);
+            other.gameObject.GetComponent<Rigidbody>().AddExplosionForce(1000, transform.position, 4);
         }
     }
 }
